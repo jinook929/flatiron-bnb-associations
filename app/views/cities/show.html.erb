@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<ul>
+  <strong>Name:</strong>
+  <%= @city.name %>
+</ul>
+
+<ul>
+  <% @listings.each do |listing| %>
+    <li><%= listing.title %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>
